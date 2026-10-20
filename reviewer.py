@@ -7,8 +7,10 @@ from syntax_checker import check_syntax
 from static_analysis import analyze_static
 
 MODEL_NAME = "gemini-3.8-flash"
-load_dotenv()  # Load environment variables from .env file
+load_dotenv(override=True)  # Load environment variables from .env file
 
+print("GEMINI_API_KEY exists:", bool(os.getenv("GEMINI_API_KEY")))
+print("GOOGLE_API_KEY exists:", bool(os.getenv("GOOGLE_API_KEY")))
 
 SYSTEM_PROMPT = """
 You are a senior software engineer performing a code review.
