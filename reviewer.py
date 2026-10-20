@@ -7,6 +7,7 @@ from syntax_checker import check_syntax
 from static_analysis import analyze_static
 
 MODEL_NAME = "gemini-3.8-flash"
+load_dotenv()  # Load environment variables from .env file
 
 
 SYSTEM_PROMPT = """
