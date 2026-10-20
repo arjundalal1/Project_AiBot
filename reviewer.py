@@ -1,10 +1,12 @@
+import os
+from dotenv import load_dotenv
 from google import genai
 from utils import safe_json_parse
 from google.genai import types
 from syntax_checker import check_syntax
 from static_analysis import analyze_static
 
-MODEL_NAME = "gemini-3.5-flash"
+MODEL_NAME = "gemini-3.8-flash"
 
 
 SYSTEM_PROMPT = """
@@ -50,7 +52,8 @@ Rules
 
 
 def get_client():
-    api_key = " "
+                                                      # api_key = " "
+    api_key = os.getenv("GEMINI_API_KEY")
 
     if not api_key:
         raise EnvironmentError(
