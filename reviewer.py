@@ -4,9 +4,9 @@ from google import genai
 from utils import safe_json_parse
 from google.genai import types
 from syntax_checker import check_syntax
-from static_analysis import analyze_static
+ from static_analysis import analyze_static
 
-MODEL_NAME = "gemini-3.5-flash"
+MODEL_NAME = "gemini-3.5-flash Lite"
 load_dotenv()  # Load environment variables from .env file
 
 
